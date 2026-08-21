@@ -22,14 +22,32 @@ I:
 - Used Fast Fourier Transform (FFT) analysis to examine signal frequency characteristics
 - Compared activation patterns between the biceps and triceps
 - Investigated sources of signal noise and adapted sensor placement to improve recording quality
+## Project Visuals
 
+### Raw EMG Signal
+
+Raw surface EMG recording from the biceps during a 6 kg biceps curl, showing the signal before processing.
+
+![Raw EMG biceps signal](figures/raw-emg-biceps.png)
+
+### Rectified EMG Signal
+
+Rectified biceps EMG signal after processing, allowing muscle activation to be examined more clearly.
+
+![Rectified EMG biceps signal](figures/rectified-emg-biceps.png)
+
+### Frequency-Domain Analysis
+
+Fast Fourier Transform (FFT) of the biceps EMG signal during the 6 kg curl, showing its frequency characteristics.
+
+![EMG FFT](figures/emg-fft-biceps.png)
 ## Key Findings
 
-The analysis showed consistently greater EMG activation in the biceps than the triceps during the biceps curl movement.
+The biceps consistently showed greater muscle activation than the triceps during the biceps curl, with higher maximum amplitude, mean rectified signal and RMS values.
 
-The biceps demonstrated higher maximum amplitude, mean rectified values and RMS values, supporting its dominant role in generating force during the curl.
+The biceps signal also showed a more defined peak at lower frequencies in the FFT analysis, indicating stronger and more synchronised activation during the lifting phase.
 
-FFT analysis also showed different frequency characteristics between the biceps and triceps signals, reflecting their differing roles during the movement.
+The experiment also highlighted the importance of sensor placement and signal quality, as poor sensor contact and movement introduced noise that required troubleshooting.
 
 ## Data Processing
 
