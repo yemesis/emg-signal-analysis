@@ -1,102 +1,32 @@
-# EMG Signal Analysis
+# EMG: How the Biceps and Triceps Work During a Curl
 
-## Overview
+What do your biceps and triceps actually do during a bicep curl, and does it change as the weight goes up?
 
-Biomedical engineering laboratory project investigating muscle activation patterns in the biceps and triceps during biceps curls using surface electromyography (EMG).
+**Lab experiment with individual report · Neuromechanics and Bioelectricity of Movement · Queen Mary University of London, 2023–24**
 
-## Project Aim
+## What I did
 
-The project aimed to record and analyse EMG signals from the biceps and triceps during biceps curls performed with different weights, and investigate differences in muscle activation throughout the movement.
+We placed surface EMG electrodes on the biceps and triceps of two subjects and recorded their muscle activity during bicep curls with no weight, 2 kg, 4 kg and 6 kg. I processed the raw signals in MATLAB: notch and bandpass filtering to remove noise, then rectifying and smoothing. From the processed signals I calculated maximum amplitude, mean rectified value and RMS, and used a Fast Fourier Transform to look at frequency content.
 
-## My Work
+## What went wrong
 
-I:
+The first recordings were noisy. Poor electrode contact and movement during the curls were getting into the signal, so we made sure the electrodes were placed properly and cut down outside sources of interference.
 
-- Recorded surface EMG signals from the biceps and triceps during biceps curls
-- Collected data across different loading conditions: no weight, 2 kg, 4 kg and 6 kg
-- Processed the raw EMG data using MATLAB
-- Applied notch and bandpass filtering to reduce signal noise
-- Rectified and smoothed the EMG signals
-- Calculated maximum amplitude and mean rectified signal values
-- Calculated Root Mean Square (RMS) values to assess overall signal strength
-- Used Fast Fourier Transform (FFT) analysis to examine signal frequency characteristics
-- Compared activation patterns between the biceps and triceps
-- Investigated sources of signal noise and adapted sensor placement to improve recording quality
-## Project Visuals
+## Results
 
-### Raw EMG Signal
+- The biceps showed clearly higher activation than the triceps on every measure (maximum amplitude, mean rectified value and RMS), as you'd expect from the main lifting muscle.
+- In the frequency analysis, the biceps had a sharper peak at lower frequencies, pointing to stronger, more synchronised activation while lifting.
 
-Raw surface EMG recording from the biceps during a 6 kg biceps curl, showing the signal before processing.
+![Raw EMG signal](figures/raw-emg-biceps.png)
 
-![Raw EMG biceps signal](figures/raw-emg-biceps.png)
+![Rectified EMG signal](figures/rectified-emg-biceps.png)
 
-### Rectified EMG Signal
+![FFT of the biceps signal](figures/emg-fft-biceps.png)
 
-Rectified biceps EMG signal after processing, allowing muscle activation to be examined more clearly.
+## Tools
 
-![Rectified EMG biceps signal](figures/rectified-emg-biceps.png)
+Surface EMG · MATLAB
 
-### Frequency-Domain Analysis
+## Files
 
-Fast Fourier Transform (FFT) of the biceps EMG signal during the 6 kg curl, showing its frequency characteristics.
-
-![EMG FFT](figures/emg-fft-biceps.png)
-## Key Findings
-
-The biceps consistently showed greater muscle activation than the triceps during the biceps curl, with higher maximum amplitude, mean rectified signal and RMS values.
-
-The biceps signal also showed a more defined peak at lower frequencies in the FFT analysis, indicating stronger and more synchronised activation during the lifting phase.
-
-The experiment also highlighted the importance of sensor placement and signal quality, as poor sensor contact and movement introduced noise that required troubleshooting.
-
-## Data Processing
-
-The raw EMG signals were processed in MATLAB using:
-
-- Notch filtering
-- Bandpass filtering
-- Signal rectification
-- Signal smoothing
-- Maximum amplitude analysis
-- Mean rectified signal analysis
-- Root Mean Square (RMS) analysis
-- Fast Fourier Transform (FFT) analysis
-
-## Experimental Setup
-
-Two participants performed biceps curls using their dominant hands.
-
-Weights of:
-
-- No weight
-- 2 kg
-- 4 kg
-- 6 kg
-
-were tested, with repeated curls performed under controlled timing using a metronome.
-
-EMG sensors were positioned over the biceps and triceps with orientation aligned to the direction of the muscle fibres.
-
-## Software & Equipment
-
-- MATLAB
-- Delsys Trigno wireless EMG system
-- Surface EMG sensors
-
-## Skills Demonstrated
-
-- Biomedical signal processing
-- EMG analysis
-- MATLAB
-- Experimental design
-- Data collection
-- Quantitative analysis
-- Statistical analysis
-- Signal filtering
-- Data interpretation
-- Troubleshooting
-- Technical reporting
-
-## Project Materials
-
-- [View Project Report](./emg-signal-analysis-report.pdf)
+- [Lab report](./emg-signal-analysis-report.pdf)
